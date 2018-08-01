@@ -1,0 +1,10 @@
+export const LOYOUT_MAIN_POST = "LOYOUT_MAIN_POST";
+/**
+ * 首页数据删除
+ */
+export const LOYOUT_HOME_MAIN_INIT = "LOYOUT_HOME_MAIN_INIT";
+export const LAYOUT_MENU_ITEM_CLICK = "LAYOUT_MENU_ITEM_CLICK";
+/**
+ * 顶部导航
+ */
+export const LAYOUT_MENU_TOP_TEXT = "LAYOUT_MENU_TOP_TEXT";

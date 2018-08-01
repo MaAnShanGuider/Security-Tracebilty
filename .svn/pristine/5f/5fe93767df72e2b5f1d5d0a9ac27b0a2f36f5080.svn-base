@@ -1,0 +1,70 @@
+import React, { Component, Fragment } from 'react';
+import PropTypes from 'prop-types';
+import { bindActionCreators } from 'redux';
+import { connect } from 'react-redux';
+import * as creators from '@actions/home';
+import * as types from '@constants/actions/home';
+import Main from '@components/Code/produce/main';
+// 三个table
+import System from '@components/Code/produce/System';
+import Scan from '@components/Code/produce/Scan';
+import Other from '@components/Code/produce/Other';
+
+import "@components/Code/produce/Code.scss";
+// 公用组件
+// import SetTitle from '@components/_common/SetTitle/SetTitle';
+// 业务组件
+
+class Container extends Component {
+	constructor(...params) {
+		super(...params);
+	}
+	renderTable = () => {
+		const { location } = this.props;
+		const { query } = location;		
+		const len = Object.keys(query).length;
+
+		if (len === 0) {
+			return <System />;
+		} else {
+			switch (query.type) {
+				case "system":
+					return <System />;
+				case "scan":
+					return <Scan />;
+				case "other":
+					return <Other />;
+				default:
+					return <System />;
+			}
+		}
+	}
+	render() {
+		console.log(this.props);
+		const { location } = this.props;
+		const { query } = location;
+		return (
+			<div className="g-bg-white">
+				{
+					this.renderTable()
+				}
+			</div>
+		);
+	}
+};
+
+Container.propTypes = {};
+
+function mapStateToProps(state) {
+	return {
+		homeMain: state.homeMain,
+	};
+}
+
+function mapDispatchToProps(dispatch) {
+	return {
+		actions: bindActionCreators(creators, dispatch)
+	};
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Container);

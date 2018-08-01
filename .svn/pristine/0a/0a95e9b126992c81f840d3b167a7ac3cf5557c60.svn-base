@@ -1,0 +1,49 @@
+.g-reset-antd {
+	/* 侧边栏开始 */
+	.ant-layout-sider, .ant-menu-dark, .ant-menu-dark .ant-menu-sub { 
+		background: #fff !important;
+	}
+	.ant-layout-sider {
+		border-right: 1px solid #cdcdcd;
+	}
+	.ant-layout-header {
+		border-bottom: 1px solid #cdcdcd;	
+	}
+	.ant-menu-dark .ant-menu-inline.ant-menu-sub {
+		background: #fff !important;	
+	}
+	.ant-menu.ant-menu-dark .ant-menu-item-selected, 
+	.ant-menu-submenu-popup.ant-menu-dark .ant-menu-item-selected {
+		background-color: #f5f6fb !important;
+		
+	}
+	.ant-menu-dark .ant-menu-item, 
+	.ant-menu-dark .ant-menu-item-group-title, 
+	.ant-menu-dark .ant-menu-item > a {
+		color: #656e82 !important;
+	}
+	 .ant-menu-dark .ant-menu-item-selected > a, .ant-menu-dark .ant-menu-item-selected > a:hover{
+		color: #2378f9 !important; 
+	 }
+	 .ant-menu-dark .ant-menu-inline.ant-menu-sub {
+		box-shadow: none;
+	 }
+	 .ant-menu-dark .ant-menu-item:hover, 
+	 .ant-menu-dark .ant-menu-item-active, 
+	 .ant-menu-dark .ant-menu-submenu-active, 
+	 .ant-menu-dark .ant-menu-submenu-open, 
+	 .ant-menu-dark .ant-menu-submenu-selected, 
+	 .ant-menu-dark .ant-menu-submenu-title:hover,
+	 .ant-menu-dark, .ant-menu-dark .ant-menu-sub {
+		color: #000 !important;
+	 }
+	 .ant-calendar-picker-input{
+		 &::-webkit-input-placeholder{
+            color:#333;
+        }
+	 }
+			
+	
+	/* 侧边栏结束 */
+
+}

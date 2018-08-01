@@ -1,0 +1,131 @@
+import React, { Component } from 'react';
+import { Menu, Icon } from 'antd';
+import { Link } from 'react-router';
+const list = [
+	{
+		key: '/home',
+		text: '首页',
+		icon: 'icon-shouye',
+		children: [
+			{
+				key: '/home/main',
+				text: '首页',
+			},
+			{
+				key: '/home/log',
+				text: '操作日志',
+			},
+		]
+	},
+	{
+		key: '/code',
+		text: '追溯',
+		icon: 'icon-jiancezhuisu',
+		children: [
+			{
+				key: '/code/list',
+				text: '追溯码列表',
+			},
+			{
+				key: '/code/produce',
+				text: '追溯码生成',
+			},
+			{
+				key: '/code/detail',
+				text: '代理追溯码详情',
+			},
+			{
+				key: '/code/distribute',
+				text: '追溯码划拨',
+			},
+			{
+				key: '/code/record',
+				text: '追溯码记录',
+			},
+			{
+				key: '/code/remind',
+				text: '窜货提醒',
+			},
+		]
+	},
+	{
+		key: '/security',
+		text: '防伪',
+		icon: 'icon-fangweishixinzhe',
+		children: [
+			{
+				key: '/security/list',
+				text: '防伪码列表',
+			},
+			{
+				key: '/security/produce',
+				text: '防伪码生成',
+			},
+		]
+	},
+	{
+		key: '/set',
+		text: '设置',
+		icon: 'icon-shezhi',
+		children: [
+			{
+				key: '/set/shop',
+				text: '设置店铺',
+			},
+			{
+				key: '/set/security',
+				text: '防伪追溯设置',
+			},
+			{
+				key: '/set/decoration',
+				text: '装修页面',
+			},
+		]
+	},
+];
+ 
+class Nav extends Component {
+	constructor(props) {
+		super(props);
+	}
+	childItem(list) {
+		
+	}
+	
+	render() {
+		const { menuProps } = this.props; 
+		return (
+			// 注意，这里的props是createNav中管理的
+			<Menu {...menuProps}>
+				{
+					list.map((item, index) => {
+						return (
+							<Menu.SubMenu 
+								key={item.key} 
+								title={
+									<span className="_nav-text">
+										<i className={`iconfont g-fs-19 g-m-r-10 g-icon ${item.icon}`} />
+										{item.text}
+									</span>
+								}
+							>
+								{
+									item.children.map((child, index) => {
+										return (
+											<Menu.Item key={child.key}>
+												<Link to={child.key}>{child.text}</Link>
+											</Menu.Item>
+										);
+									})
+								}
+							</Menu.SubMenu>
+						);
+						
+					})
+				}
+			</Menu>
+		);
+		
+	}
+}
+export default Nav;

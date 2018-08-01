@@ -1,0 +1,46 @@
+@import "~wya-sass/lib/themes/index.scss";
+@import "~wya-sass/lib/core/index.scss";
+@mixin input($width, $_width) {
+	background: rgba($color: #fff, $alpha: 0.05);
+		border: 1px solid #cdcdcd;
+		width: $width;
+		height: 40px;
+		line-height: 40px;
+		&>input {
+			background: none;
+			padding: 0 20px;
+			width: $_width;
+			&:focus {
+				outline: none
+			}
+		}
+}
+.v-login-box {
+	border: 10px solid rgba($color: #fff, $alpha: 0.2);
+	width: 980px;
+	height: 418px;
+	._left {
+		border-right: 1px solid rgba($color: #fff, $alpha: 0.4);
+		.__logo {
+			width: 260px;
+		}
+		
+	}
+	._input {
+		@include input(280px, 240px);	
+	}
+	._input-short {
+		@include input(150px, 80px)
+	}
+	._check {
+		width: 280px;
+	}
+	._login-btn {
+		width: 280px;
+		background: #2378f9;
+		height: 40px;
+		line-height: 40px;
+
+	}
+	
+}

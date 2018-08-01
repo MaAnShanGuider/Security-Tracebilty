@@ -1,0 +1,17 @@
+import React, { Component } from "react";
+
+class CodeRelations extends Component {
+	constructor(props) {
+		super(props);
+	}
+
+	render() {
+		return (
+			<div className="_box system-coderelations">
+				<div className="_title">条码关系</div>
+			</div>
+		);
+	}
+}
+
+export default CodeRelations;

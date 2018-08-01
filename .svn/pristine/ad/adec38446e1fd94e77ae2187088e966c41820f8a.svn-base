@@ -1,0 +1,33 @@
+import React, { Component } from 'react';
+import { Form, Icon, Input, Button } from 'antd';
+import { createForm, formShape } from 'rc-form';
+
+const FormItem = Form.Item;
+@createForm()
+class GoodsModal extends Component {
+	constructor(props) {
+		super(props);
+	}
+    handleSearchSubmit = () => {
+    	const { form } = this.props;
+
+    	console.log(form.getFieldValue("goods"));
+    }
+    render() {
+    	const { getFieldDecorator } = this.props.form;
+    	return (
+    		<div className="_goodsmodal">
+    			<FormItem
+    			>
+    				{getFieldDecorator('goods', {
+    					rules: [{ required: true, message: '请输入商品名称、货号' }],
+    				})(
+    					<Input  placeholder="请输入商品名称、货号进行搜索" />
+    				)}
+    				<Button type="primary" onClick={this.handleSearchSubmit}>搜索</Button>
+    			</FormItem>
+    		</div>
+    	);
+    }
+}
+export default GoodsModal;

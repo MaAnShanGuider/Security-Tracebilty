@@ -1,0 +1,52 @@
+import React, { Component } from "react";
+import { Modal } from 'antd';
+import GoodsModal from "./GoodsModal";
+
+class CodeSettings extends Component {
+	constructor(props) {
+		super(props);
+		this.state = {
+			visible: false
+		};
+	}
+	// 点击打开弹窗
+	handleClickShowGoods = () => {
+		
+		this.setState({ visible: true });
+	}
+	// 弹窗确定按钮
+	handleClickShowGoodsSure = () => {
+
+		this.setState({ visible: false });
+	}
+	// 弹窗取消按钮
+	handleClickShowGoodsCancel = () => {
+
+		this.setState({ visible: false });
+	}
+	render() {
+		const { visible } = this.state;
+		return (
+			<div className="_box system-codesettings">
+				<div className="_title">条码设置</div>
+				<div className="g-pd-20 _goods_preview g-flex">
+					<i onClick={this.handleClickShowGoods}>＋</i>
+					<Modal
+						title="请选择商品"
+						visible={visible}
+						onOk={this.handleClickShowGoodsSure}
+						onCancel={this.handleClickShowGoodsCancel}
+						destroyOnClose={true}
+						width={658}
+						okText="确认"
+						cancelText="取消"
+					>
+						<GoodsModal />
+					</Modal>
+				</div>
+			</div>
+		);
+	}
+}
+
+export default CodeSettings;

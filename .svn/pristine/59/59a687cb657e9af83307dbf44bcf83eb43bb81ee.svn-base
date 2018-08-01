@@ -1,0 +1,53 @@
+@import "core/index";
+/**
+* 图片样式
+*/
+.g-img-58 {
+	max-width: 58px !important;
+	width: 58px !important;
+	height: 58px !important;
+	line-height: 58px !important;
+}
+.g-img-70 {
+	max-width: 70px !important;
+	width: 70px !important;
+	height: 70px !important;
+	line-height: 70px !important;
+}
+/*
+* 按钮
+*/
+.g-btn-blue {
+	height: 34px;
+	background: #2378f9 !important;
+	border-radius: 5px;
+	line-height: 34px;
+	padding: 0 20px;
+	color: #fff !important;
+	display: inline-block;
+	&:hover, &:active{
+		background: #125ed2 !important;	
+	}
+}
+.g-btn-tip {
+	height: 34px;
+	border-radius: 5px;
+	line-height: 34px;
+	padding: 0 20px;
+	color: #656e82;
+	border: 1px solid #cdcdcd;
+	display: inline-block;
+	&:hover, &:active{
+		background: #f8f8f8;	
+	}
+}
+/*
+* display
+*/
+.g-block {
+	display: block !important;
+}
+.g-inline {
+	display: inline-block !important;
+}
+

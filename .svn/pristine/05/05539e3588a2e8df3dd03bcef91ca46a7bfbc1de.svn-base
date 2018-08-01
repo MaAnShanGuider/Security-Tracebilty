@@ -1,0 +1,90 @@
+.v-code {
+    ._box {
+        border: 1px solid #d9dce3;
+    }
+    ._table {
+        width: auto;
+    }
+    ._title {
+        height: 40px;
+        padding-left: 20px;
+        background: #f6f7fc;
+        font: 14px / 40px '';
+        color: #333;
+    }
+    .system-codesettings {
+        width: 398px;
+        height: 184px;
+        border-bottom: none;
+        ._goods_preview {
+            height: 70px;
+            i {
+                height: 68px;
+                border: 1px solid #cfcdce;
+                width: 68px;
+                font: bold 44px / 68px '';
+                color: #cfcdce;
+                display: block;
+                text-align: center;
+            }
+        }
+    }
+    .system-coderelations {
+        width: 398px;
+        height: 193px;
+    }
+    .system-exportsettings {
+        width: 558px;
+        height: 378px;
+    }
+    .system-exporthistory {
+        ._exporthistory_title {
+            height: 54px;
+            font: 16px / 54px '';
+            span {
+                color: red;
+                font: 14px / 54px '';
+                margin-left: 20px;
+            }
+        }
+        table {
+            width: 100%;
+            thead {
+                background: #eff2f7;
+                height: 38px;
+                font: normal 14px / 38px '';
+                tr{
+                    th:nth-child(1) {
+                        padding-left: 26px;
+                    }
+                }
+            }
+            tbody {
+                height: 38px;
+                font: normal 14px / 54px '';
+                tr {
+                    border-bottom: 1px solid #dadada;
+                    td {
+                        &:nth-child(1) {
+                            padding-left: 26px;
+                        }
+                        &:last-child {
+                            color: #2475f8;
+                            span:nth-child(2) {
+                                margin: 0 10px;
+                            }
+                        }
+                        
+                    }
+                }
+            }
+        }
+    }
+    
+}
+
+// 充值antd的表单样式
+.ant-input {
+    width: 220px;
+    margin-right: 38px;
+}

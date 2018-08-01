@@ -1,0 +1,69 @@
+/**
+* 文字颜色
+* middle 辅助色
+* dark 和 light 延伸色
+*/
+.g-blue-middle {
+	color: #2378f9;
+}
+.g-black-dark {
+	color: #000;
+}
+.g-black-middle {
+	color: #333;
+}
+.g-black-light  {
+	color: #666;
+}
+.g-gray-dark {
+	color: #999;
+}
+.g-white{
+	color: #fff;
+}
+/**
+* 分界线
+*/
+.g-b-gray {
+	border: 1px solid #dbdbdb
+}
+.g-bb-gray {
+	border-bottom: 1px solid #dbdbdb
+}
+.g-b-blue {
+	border: 1px solid #d9ddeb
+}
+.g-bb-blue {
+	border-bottom: 1px solid #d9ddeb
+}
+
+/**
+* 背景
+*/
+.g-bg-blue {
+	background: #2378f9 !important;
+}
+.g-bg-check {
+	background: #f5f6fb !important;
+}
+.g-bg-search {
+	background: #f3f3f3 !important;
+}
+/*
+* input placeholder 颜色
+*/
+.g-input-ph {
+	&::-webkit-input-placeholder{
+		color:#333;
+	}
+}
+/*
+* 首页icon样式
+*/
+.g-icon {
+	-webkit-text-fill-color: #e8e8e8;
+	-webkit-text-stroke: 1px #9b9b9b;
+}
+/**
+* 边距
+*/
